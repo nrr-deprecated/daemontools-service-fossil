@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec envdir ./env sh -c '
+	setuidgid $USER multilog t n50 ./main
+'

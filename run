@@ -1,0 +1,7 @@
+#!/bin/sh
+
+exec 2>&1
+echo Starting...
+exec envdir ./env sh -c '
+	tcpserver -v $ADDRESS $PORT ${FOSSIL:-"fossil"} http $REPOSITORY
+'
